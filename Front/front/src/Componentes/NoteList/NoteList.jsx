@@ -6,9 +6,8 @@ const NoteList = ({ notes }) => {
         flexWrap: "wrap", 
         padding: "20px", 
         borderRadius: "8px", 
-        marginBottom: "20px" }} className="note-list">
+        marginBottom: "20px" }}>
           <ul style={{ listStyleType: "none", 
-          padding: "0", 
           display: "flex", 
           flexWrap: "wrap", 
           padding: "20px", 

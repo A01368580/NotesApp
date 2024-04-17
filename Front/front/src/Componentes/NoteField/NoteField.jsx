@@ -1,10 +1,13 @@
+// Se importa useState desde React para agregar estado al componente
 import React, { useState } from "react";
 import axios from "axios";
 
 const baseUrl = 'http://localhost:3001/api/notes';
 
 const NoteField = ({ addNote }) => {
-    const [newNote, setNewNote] = useState("");
+  // useState es un hook que te permite agregar estado a los componentes de función
+  // Creamos una variable de estado llamada 'newNote' y una función 'setNewNote' para actualizarla
+  const [newNote, setNewNote] = useState("");
 
   const handleNoteChange = (event) => {
     setNewNote(event.target.value);
@@ -27,7 +30,7 @@ const NoteField = ({ addNote }) => {
   };
 
   return (
-    <div style={{ textAlign: "center" }} className="note-form">
+    <div style={{ textAlign: "center" }}>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -35,7 +38,6 @@ const NoteField = ({ addNote }) => {
           onChange={handleNoteChange}
           placeholder="Enter your note..."
           style={{
-            width: "100%",
             padding: "10px",
             marginBottom: "10px",
             backgroundColor: "transparent",
