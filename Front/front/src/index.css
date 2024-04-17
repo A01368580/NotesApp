@@ -1,0 +1,20 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-image: url('assets/hoja.jpg');
+  background-size: cover; /* Ajustar la imagen para cubrir todo el contenedor */
+  background-position: center; /* Centrar la imagen */
+  background-repeat: no-repeat;
+
+}
+
+body {
+  margin: 0;
+  place-items: center;
+  text-align: center;
+  align-items: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 50px;
+}
