@@ -3,10 +3,16 @@ const cors = require('cors');
 const { Sequelize, Model, DataTypes } = require('sequelize')
 const express = require('express')
 const app = express()
+var swaggerUI = require('swagger-ui-express');
+var swaggerDocument = require('./swagger.json');
+var swaggerOptions = {
+    explorer: true,
+};
 
 //middelware json y cors
 app.use(express.json());
 app.use(cors());
+app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument, swaggerOptions));
 
 const sequelize = new Sequelize(process.env.DATABASE_URL)
 
